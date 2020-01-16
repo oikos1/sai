@@ -199,10 +199,8 @@ contract SaiTub is DSThing, SaiTubEvents {
     }
 
     function join(uint wad) public note {
-        //require(!off);
-        //require(ask(wad) > 0);
-        //require(gem.transferFrom(msg.sender, this, ask(wad) ) );
-        //require( IERC20(gem).transferFrom(msg.sender, this, ask(wad)) );
+        require(!off);
+        require(ask(wad) > 0);
         ERC20 erc20 = ERC20(gem);
         require(erc20.transferFrom(msg.sender, address(this), ask(wad)));
         skr.mint(msg.sender, wad);
@@ -257,15 +255,20 @@ contract SaiTub is DSThing, SaiTubEvents {
 
     // Returns true if cup is well-collateralized
     function safe(bytes32 cup) public returns (bool) {
+
+        //Debug(cup, tag(), ink(cup));
+       // Debug(cup, vox.par(), tab(cup));
+
         var pro = rmul(tag(), ink(cup));
         var con = rmul(vox.par(), tab(cup));
         var min = rmul(con, mat);
+
+        Debug(cup, pro, min);
+
         return pro >= min;
     }
 
-
     //--CDP-operations--------------------------------------------------
-
     function open() public note returns (bytes32 cup) {
         require(!off);
         cupi = add(cupi, 1);
@@ -309,7 +312,9 @@ contract SaiTub is DSThing, SaiTubEvents {
 
         cups[cup].ire = add(cups[cup].ire, rdiv(wad, rhi()));
         sai.mint(cups[cup].lad, wad);
+
         Draw(cup, wad, cups[cup].lad, cups[cup].ink, cups[cup].art, cups[cup].ire, msg.sender);
+        Debug(cup, rdiv(wad, chi()), wad );
         require(safe(cup));
         require(sai.totalSupply() <= cap);
     }

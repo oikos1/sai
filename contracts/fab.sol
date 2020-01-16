@@ -9,7 +9,7 @@ import './value.sol';
 import './mom.sol';
 
 contract GemFab {
-    function newTok(bytes32 name) public returns (DSToken token) {
+    function newTok(string name) public returns (DSToken token) {
         token = new DSToken(name);
         token.setOwner(msg.sender);
     }

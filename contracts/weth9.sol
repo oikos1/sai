@@ -32,8 +32,11 @@ contract WETH9 {
         deposit();
     }
     function deposit() public payable {
-        balanceOf[msg.sender] += msg.value;
-        Deposit(msg.sender, msg.value);
+        uint tronValue = msg.value / (10**6);
+        uint wei = tronValue * (10**18);
+        
+        balanceOf[msg.sender] += wei; //msg.value;
+        Deposit(msg.sender, wei);
     }
     function withdraw(uint wad) public {
         require(balanceOf[msg.sender] >= wad);

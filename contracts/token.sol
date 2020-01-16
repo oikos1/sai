@@ -18,15 +18,13 @@
 pragma solidity ^0.4.13;
 
 import "./stop.sol";
-
 import "./base.sol";
 
 contract DSToken is DSTokenBase(0), DSStop {
 
-    bytes32  public  symbol;
     uint256  public  decimals = 18; // standard token precision. override to customize
 
-    function DSToken(bytes32 _symbol) public {
+    function DSToken(string _symbol) public {
         symbol = _symbol;
     }
 
@@ -93,9 +91,16 @@ contract DSToken is DSTokenBase(0), DSStop {
     }
 
     // Optional token name
-    string   public  name = "";
+    string   public name     = "";
+    string   public symbol   = "";
 
-    function setName(string name_) public auth {
-        name = name_;
+    function setName(string _name) public auth {
+        name = _name;
     }
+
+    function setSymbol(string _symbol) public auth {
+        name = _symbol;
+    }
+
+
 }

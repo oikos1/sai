@@ -90,6 +90,8 @@ contract TubTest is DSTest, DSThing {
         tub.pip().poke(bytes32(5000000 sun));
         assertEq(tub.pip().read(), bytes32(5000000 sun));
         assertEq(wmul(tub.per(), uint(tub.pip().read())), tub.tag());
+        emit Debug(wmul(tub.per(), uint(tub.pip().read())), tub.tag());
+        
     }
 
     function testGap() public {

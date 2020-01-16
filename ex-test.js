@@ -20,15 +20,15 @@ const solidityNode = new HttpProvider("http://192.168.0.102:9090");
 const eventServer = "http://192.168.0.102:9090";
 
 // update with your private key here
-const privateKey = 'c0d1e410359484774a5f3fbfc70271baf4d6d120bf86859b6c4ee82a8e143c95';
-const _address = 'TQF8uGbMkhxBX2kJSibbdr7fdastQTbuzd';
+const privateKey = '31ca7245cd48254df2d08eb9ac28cb0e941e5f9145586193655b17f51a9d6f26';
+const _address = 'TEsk263pdTwFgXEC2oqCuVoxwTgGVhqrDJ';
 
 
 const tronWeb = new TronWeb(fullNode, solidityNode, eventServer, privateKey);
 tronWeb.setAddress(_address);
 
-const TubTest_Address = 'TA7d9AtYXQRnzkToZg4L6G8qojxNBXFV2P';
-const tVox_Address = 'TAnp2kcJAeSWYTo8Y4Q7B8Au47rQ1bz4Yi';
+const TubTest_Address = 'TEmkdzC74oMisxKYtZ65UatoiJaweKjrJP';
+const tVox_Address = 'TRvykTB2Q1aWiUTZsxY3DbBJZDxPjFnbSC';
 
 const deployContract = async (name, ...args) => {
     const Contract = loadArtifact(name);
@@ -58,7 +58,8 @@ const loadContract = async address => {
 const _TubTest = {
     "TubTest": {
     "address":  tronWeb.address.toHex(TubTest_Address),
-    "abi":[{"constant":false,"inputs":[{"name":"owner_","type":"address"}],"name":"setOwner","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"authority_","type":"address"}],"name":"setAuthority","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"failed","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"authority","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"IS_TEST","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"x","type":"uint256"},{"indexed":false,"name":"y","type":"uint256"}],"name":"Debug","type":"event"},{"anonymous":true,"inputs":[{"indexed":true,"name":"sig","type":"bytes4"},{"indexed":true,"name":"guy","type":"address"},{"indexed":true,"name":"foo","type":"bytes32"},{"indexed":true,"name":"bar","type":"bytes32"},{"indexed":false,"name":"wad","type":"uint256"},{"indexed":false,"name":"fax","type":"bytes"}],"name":"LogNote","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"authority","type":"address"}],"name":"LogSetAuthority","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"}],"name":"LogSetOwner","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"target","type":"address"},{"indexed":false,"name":"exact","type":"bool"}],"name":"eventListener","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"bytes"}],"name":"logs","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"bytes32"}],"name":"log_bytes32","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"address"}],"name":"log_named_address","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"bytes32"}],"name":"log_named_bytes32","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"int256"},{"indexed":false,"name":"decimals","type":"uint256"}],"name":"log_named_decimal_int","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"uint256"},{"indexed":false,"name":"decimals","type":"uint256"}],"name":"log_named_decimal_uint","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"int256"}],"name":"log_named_int","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"uint256"}],"name":"log_named_uint","type":"event"},{"constant":false,"inputs":[{"type":"address","name":"addr"}],"name":"setUp","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testFailTurnAgain","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testPie","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testPer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testTag","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testGap","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testAsk","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testBid","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testJoin","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testExit","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testCage","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testFlow","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]}  
+    //{"name":"_gem","type":"address"},{"name":"_gov","type":"address"},{"name":"_sai","type":"address"},{"name":"_sin","type":"address"},{"name":"_skr","type":"address"},{"name":"_pip","type":"address"},{"name":"_pep","type":"address"},{"name":"_dad","type":"address"},{"name":"_vox","type":"address"},{"name":"_tub","type":"address"}
+    "abi":[{"constant":false,"inputs":[{"name":"owner_","type":"address"}],"name":"setOwner","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"authority_","type":"address"}],"name":"setAuthority","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"failed","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"authority","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"IS_TEST","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"x","type":"uint256"},{"indexed":false,"name":"y","type":"uint256"}],"name":"Debug","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sig","type":"bytes4"},{"indexed":false,"name":"guy","type":"address"},{"indexed":false,"name":"foo","type":"bytes32"},{"indexed":false,"name":"bar","type":"bytes32"},{"indexed":false,"name":"wad","type":"uint256"},{"indexed":false,"name":"fax","type":"bytes"}],"name":"LogNote","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"authority","type":"address"}],"name":"LogSetAuthority","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"}],"name":"LogSetOwner","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"target","type":"address"},{"indexed":false,"name":"exact","type":"bool"}],"name":"eventListener","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"bytes"}],"name":"logs","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"bytes32"}],"name":"log_bytes32","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"address"}],"name":"log_named_address","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"bytes32"}],"name":"log_named_bytes32","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"int256"},{"indexed":false,"name":"decimals","type":"uint256"}],"name":"log_named_decimal_int","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"uint256"},{"indexed":false,"name":"decimals","type":"uint256"}],"name":"log_named_decimal_uint","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"int256"}],"name":"log_named_int","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"key","type":"bytes32"},{"indexed":false,"name":"val","type":"uint256"}],"name":"log_named_uint","type":"event"},{"constant":false,"inputs":[],"name":"setUp","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testFailTurnAgain","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testPie","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testPer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testTag","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testGap","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testAsk","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testBid","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testJoin","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testExit","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testCage","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"testFlow","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]}  
 };
 
 const _tVox = {
@@ -68,6 +69,7 @@ const _tVox = {
 };
 
 const TubTest = tronWeb.contract(_TubTest["TubTest"].abi, _TubTest["TubTest"].address);
+
 const tVox = tronWeb.contract(_tVox["tVox"].abi, _tVox["tVox"].address);
 
 /*const hotAddress = '';
@@ -104,8 +106,22 @@ const run = async () => {
         console.log("Debug : " + JSON.stringify(result));
 
     }); 
+
 /*
-    TubTest.setUp().send({
+                'TCw74sCgyP3zC1VcYcUH6dpRNCWkePGJRV',
+                'TTgzYCevE5RHHNumhhpz7aPRwFa1UdjuoT', 
+                'TWCPp3CKSBvXReDXP2gkQdzdy8KkKosBgd', 
+                'TPT3Us6DsFuUSecaVkbDLUupBzfFzAZgf3', 
+                'TQEYTvA5kma2P9ShAixyNfB1GApvWzoNbe', 
+                'TSQQS98i7MUoNsVcMCx2uDDMUeC2PTpNrs', 
+                'TK6hdLFASTxZzP5Urg5a48PEPiwpDvP934',
+                'TR29s6MscJVPkVwDH5mtRT3hrV9co6Gtpu',
+                'TTjBjDxnue6jvecLkKXd2WogP5uhpdGLoY',
+                'TRcNwdXmzoYLVoqRUPcAq4EzzzV3U1PNvQ'
+*/
+/*
+    TubTest.setUp(
+                ).send({
                 shouldPollResponse: true,
                 callValue: 0, 
                 from : _address
@@ -118,7 +134,8 @@ const run = async () => {
                 console.log(err)
                 //console.log(tronWeb.toAscii(err.output.resMessage)   )
     });  
-
+*/
+/*
     TubTest.testPie().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -132,6 +149,8 @@ const run = async () => {
                 console.log(err)
                 //console.log(tronWeb.toAscii(err.output.resMessage)   )
     });
+*/
+/*
     TubTest.testPer().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -145,6 +164,8 @@ const run = async () => {
                 console.log(err)
                 //console.log(tronWeb.toAscii(err.output.resMessage)   )
     });
+    */
+/*    
     TubTest.testTag().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -157,7 +178,9 @@ const run = async () => {
 
                 console.log(err)
                 //console.log(tronWeb.toAscii(err.output.resMessage)   )
-    }); 
+    });
+*/
+/* 
    TubTest.testGap().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -171,7 +194,8 @@ const run = async () => {
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
     }); 
-
+*/
+/*
    TubTest.testAsk().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -185,7 +209,8 @@ const run = async () => {
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
     });      
-   TubTest.testBid().send({
+*/
+/*       TubTest.testBid().send({
                 shouldPollResponse: true,
                 callValue: 0, 
                 from : _address
@@ -197,7 +222,9 @@ const run = async () => {
 
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
-    });      
+    });   
+*/    
+/*       
    TubTest.testJoin().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -210,7 +237,9 @@ const run = async () => {
 
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
-    });        
+    });      
+*/
+/*
    TubTest.testExit().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -224,6 +253,8 @@ const run = async () => {
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
     });  
+*/
+/*
    TubTest.testCage().send({
                 shouldPollResponse: true,
                 callValue: 0, 
@@ -236,8 +267,9 @@ const run = async () => {
 
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
-    });         
-    /*TubTest.testFlow().send({
+    });    
+*/     
+    TubTest.testFlow().send({
                 shouldPollResponse: true,
                 callValue: 0, 
                 from : _address
@@ -249,7 +281,7 @@ const run = async () => {
 
                 console.log(err)
                //console.log(tronWeb.toAscii(err.output.resMessage)   )
-    });             */
+    });             
 /*
         tVox.setUp('TJFe8BbJizAnj385NTYKAw2MUaWWroRad7').send({
                 shouldPollResponse: true,
@@ -266,6 +298,7 @@ const run = async () => {
 
         });
 */
+/*
         tVox.testVoxDefaultPar().send({
                 shouldPollResponse: true,
                 callValue: 0, 
