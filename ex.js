@@ -22,12 +22,12 @@ const solidityNode = new HttpProvider("http://192.168.0.102:9090");
 const eventServer = "http://192.168.0.102:9090";
 
 // update with your private key here
-const privateKey = '1e63d2b4e71dcf6ac149688872f479126f75079f9d4266cbb5d68902fdef8d1a';
-const _address = 'TYbL1eg7A3GRPUR4JVRuQp1G4BcRSdXSLQ';
+const privateKey = '83b44bc40393db67d6de8103d20a0126273e791a820b667308933b9132c3964b';
+const _address = 'TE8WpgPn3q1a3w2w9wt3LnKPPe1EkFYeZf';
 
 
 const tronWeb = new TronWeb(fullNode, solidityNode, eventServer, privateKey);
- 
+
 const GEM_FAB_Address = '';
 const VOX_FAB_Address = '';
 const TUB_FAB_Address = '';
@@ -36,36 +36,37 @@ const TOP_FAB_Address = '';
 const MOM_FAB_Address = '';
 const DAD_FAB_Address = '';
 
-const SAI_GOV_Address = 'TVu2bCx58wwPjrNAbQQ7hvEt8tQRA3aViu';
-const SAI_GEM_Address = 'TSFkwVWYyG5Z6jcNsfFi1FZAzsQtwaHYJg';
-const SAI_PIP_Address = 'TWkH8HDUNiXuB8Bton4U2yjPuP1hWi7Ufw';
-const SAI_PEP_Address = 'TVv1xJYJHMLMy6MYKyfXQ8TxsLSQfLyBLa';
+const SAI_GOV_Address = 'TK62kw3T623FDZxuh8Zn3q4uRjjdSNXNtV';
+const SAI_GEM_Address = 'TWZrkYYBJ58Fqb8hQHDeAJTej62wBCGcs9';
+const SAI_PIP_Address = 'TQdeAuUHmd5NF6FasZQQPJAJAcnxB77mNc';
+const SAI_PEP_Address = 'TCuAUsvGepBPdZEAdhGrbprKKzWiRCUfCy';
 const SAI_PIT = '0x0000000000000000000000000000000000000123';
 
-const SAI_IOU_Address = 'TDwLANhY7gDBQwA7wazpq5F736ATR3YbhV';
-const SAI_ADM_Address = 'TSqNxQhpPg86so3cZB9P5vMRWycky2X1MM';
+const SAI_IOU_Address = 'TBtiU2b7irVsL1xSw2rMXNcoMrtsrXMt8B';
+const SAI_ADM_Address = 'TBjWj1iKGvqcv7NCQw5mpsiew59uukiZ8a';
 
-const MOM_Address = "TPsso3tsQe9WbURgK9MsZEAM1whPtAEwfp";
-const DAD_Address = 'TSYw9domcqWbD5xFFMswFG2PDnMS42iYf7'; 
+const MOM_Address = "TMYu4qUnZNoHz2mTJZLDZsHCHvwFGGeSZ3";
+const DAD_Address = 'TKpKMh7xp4fyNM11mgzKj8jfoizg42Muis'; 
 
-const SAI_Address = 'TDYQUMKVhN6hFMyeaoM5nAAQWu1u3P3os9';
-const SIN_Address = 'TKNpztjw1r39Dj8j9Na5MRAdc7ByoukyUX';
-const SKR_Address = 'TArb2cUCyB1yvWboFyAZYRt7VX2LfsBkBU';
+const SAI_Address = 'TCVnoNGwcGSLsMDL86rDqaueSMRbSBHKtZ';
+const SIN_Address = 'TYP1ucpCErBaS3zxwRGtdGGG7TiqZ1oJH1';
+const SKR_Address = 'TZ39nQ4Ds6odmk4gBkiJTfXT4Dd1auSS6K';
 
 const DAI_FAB_Address = '';
 
-const VOX_Address = 'TAcKCdpzuwRGQz2iDfNwt1jPcKxBarrLGg';
+const VOX_Address = 'TK2UyaazLoJyJXeviEs2bPp1gZMSyVJqYi';
 
 //console.log("415adca215d0b6e07002cd8d05dcf1c83d5a0b4d66", tronWeb.address.toHex(VOX_Address));
 
-const TUB_Address = 'TUv3GduUqW6YLVtLibSDhjJJjug19L7gtL'; 
-const TAP_Address = 'TWqSjpZk3wwQMKAa6anqsupJLboSTkyxVo';
-const TOP_Address = 'TGzpfyZTLFLT5q86EbW1LJqd1MpNa7pi4F';
+const TUB_Address = 'TCHizMDb7d5118yJpn5NKKFtiiLKsxUmDr'; 
+const TAP_Address = 'TFDk4tiY6GMxPJoUQLmtYGh4Uyw8uHJBrU';
+const TOP_Address = 'TPqQEJV2ZGM5EnDAFkvdYtvTg7bXVvz3h9';
+
+
+//console.log("TPzWrGjJL4nn6X17jhfPMPS1FtEwLWAPoE", CryptoUtils.getBase58CheckAddress(   hexStr2byteArray("4163c48fca2a4f283baabb07b66bfa18039ece97f5") ) );
 
 //const tVox_Address = '';
 //const SaiTest_Address = '';
-//
-
 
 const deployContract = async (name, ...args) => {
     const Contract = loadArtifact(name);
@@ -187,7 +188,7 @@ const _Gem = {
 const _Sai = {
     "Sai": {
     "address":  tronWeb.address.toHex(SAI_Address),
-    "abi":[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"stop","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"owner_","type":"address"}],"name":"setOwner","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"src","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"stopped","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"authority_","type":"address"}],"name":"setAuthority","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"start","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"authority","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"src","type":"address"},{"name":"guy","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_symbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Burn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"authority","type":"address"}],"name":"LogSetAuthority","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"}],"name":"LogSetOwner","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sig","type":"bytes4"},{"indexed":false,"name":"guy","type":"address"},{"indexed":false,"name":"foo","type":"bytes32"},{"indexed":false,"name":"bar","type":"bytes32"},{"indexed":false,"name":"wad","type":"uint256"},{"indexed":false,"name":"fax","type":"bytes"}],"name":"LogNote","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"src","type":"address"},{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"src","type":"address"},{"indexed":true,"name":"dst","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"push","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"wad","type":"uint256"}],"name":"pull","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"move","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"mint","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"wad","type":"uint256"}],"name":"mint","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"wad","type":"uint256"}],"name":"burn","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"burn","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"}],"name":"setName","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_symbol","type":"string"}],"name":"setSymbol","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]}  
+    "abi":[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"stop","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"owner_","type":"address"}],"name":"setOwner","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"src","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"stopped","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"authority_","type":"address"}],"name":"setAuthority","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"start","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"authority","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"src","type":"address"},{"name":"guy","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_symbol","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Burn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Debug","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"authority","type":"address"}],"name":"LogSetAuthority","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"}],"name":"LogSetOwner","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sig","type":"bytes4"},{"indexed":false,"name":"guy","type":"address"},{"indexed":false,"name":"foo","type":"bytes32"},{"indexed":false,"name":"bar","type":"bytes32"},{"indexed":false,"name":"wad","type":"uint256"},{"indexed":false,"name":"fax","type":"bytes"}],"name":"LogNote","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"src","type":"address"},{"indexed":true,"name":"guy","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"src","type":"address"},{"indexed":true,"name":"dst","type":"address"},{"indexed":false,"name":"wad","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"push","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"wad","type":"uint256"}],"name":"pull","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"src","type":"address"},{"name":"dst","type":"address"},{"name":"wad","type":"uint256"}],"name":"move","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"wad","type":"uint256"}],"name":"mint","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"mint","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"guy","type":"address"},{"name":"wad","type":"uint256"}],"name":"burn","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"wad","type":"uint256"}],"name":"burn","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"string"}],"name":"setName","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_symbol","type":"string"}],"name":"setSymbol","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]}  
 };
 
 const _Sin = {
@@ -277,7 +278,7 @@ const run = async () => {
 */
     //deploy
     const SAI_GEM = !!SAI_GEM_Address ? await loadContract(SAI_GEM_Address) : await deployContract('WETH9', web3.utils.asciiToHex("ETH").padEnd(66, '0') ); // web3.utils.asciiToHex('SAI').padEnd(66, '0')
-    const SAI_GOV = !!SAI_GOV_Address ? await loadContract(SAI_GOV_Address) : await deployContract('DSToken', web3.utils.asciiToHex("GOV").padEnd(66, '0')); // web3.utils.asciiToHex('SAI').padEnd(66, '0')  web3.utils.fromAscii(val)
+    const SAI_GOV = !!SAI_GOV_Address ? await loadContract(SAI_GOV_Address) : await deployContract('DSToken', "GOV"); // web3.utils.asciiToHex('SAI').padEnd(66, '0')  web3.utils.fromAscii(val)
     const SAI_PIP = !!SAI_PIP_Address ? await loadContract(SAI_PIP_Address) : await deployContract('DSValue');
     const SAI_PEP = !!SAI_PEP_Address ? await loadContract(SAI_PEP_Address) : await deployContract('DSValue');
 //    const DAI_FAB = !!DAI_FAB_Address ? await loadContract(DAI_FAB_Address) : await deployContract('DaiFab', GEM_FAB_Address, VOX_FAB_Address, TUB_FAB_Address, TAP_FAB_Address, TOP_FAB_Address, MOM_FAB_Address, DAD_FAB_Address);  
@@ -300,7 +301,6 @@ const run = async () => {
     const SAI_ADM = !!SAI_ADM_Address ? await loadContract(SAI_ADM_Address) : await deployContract('DSChief', SAI_GOV_Address, SAI_IOU_Address, 5 );
  
 /*
-
    Vox.setOwner(_address).send({
             shouldPollResponse: true,
             callValue: 0, 
@@ -635,7 +635,7 @@ const run = async () => {
                         console.log(err)
                 });
 
-                const cap = new BigNumber(  Math.pow(10, 9) * 1000000000000000000 );
+                const cap = new BigNumber(  Math.pow(10, 38) * 1 );
                 //console.log("TAX : " + tax.toFixed());      
 
                 Tub.mold( web3.utils.asciiToHex('cap').padEnd(66, '0'),  cap.toFixed() ).send({
@@ -647,6 +647,31 @@ const run = async () => {
                     }).catch(function (err) {
                         console.log(err)
                 });
+
+                /*Vox.tune((new BigNumber(1*(10**27))).toFixed()).send({
+                        shouldPollResponse: true,
+                        callValue: 0, 
+                        from : _address
+                    }).then(function (res) {
+
+                        console.log("Vox TUNE", res);
+
+                    }).catch(function (err) {
+                        console.log(err)
+                });*/
+
+                /*Vox.prod().send({
+                        shouldPollResponse: true,
+                        callValue: 0, 
+                        from : _address
+                    }).then(function (res) {
+
+                        console.log("Vox PROD", res);
+
+                    }).catch(function (err) {
+                        console.log(err)
+                }); */                     
+
                 /*Tub.setPip(SAI_PIP_Address).send({
                         shouldPollResponse: true,
                         callValue: 0, 
@@ -700,6 +725,33 @@ const run = async () => {
                     }).catch(function (err) {
                         console.log(err)
                 });
+                SAI_GOV.setName( "Oikonos governance").send({
+                        shouldPollResponse: true,
+                        callValue: 0, 
+                        from : _address
+                    }).then(function (res) {
+                        console.log("Sai.setName ", res);
+                    }).catch(function (err) {
+                        console.log(err)
+                });
+                SAI_GOV.setSymbol("OIK").send({
+                        shouldPollResponse: true,
+                        callValue: 0, 
+                        from : _address
+                    }).then(function (res) {
+                        console.log("Sai.setName ", res);
+                    }).catch(function (err) {
+                        console.log(err)
+                });                                      
+                /*SAI_GOV.mint("TYbL1eg7A3GRPUR4JVRuQp1G4BcRSdXSLQ","1000000000000000000000000").send({
+                        shouldPollResponse: true,
+                        callValue: 0, 
+                        from : _address
+                    }).then(function (res) {
+                        console.log("GOV mint ", res);
+                    }).catch(function (err) {
+                        console.log(err)
+                });*/                   
  
         }
 
@@ -1220,6 +1272,12 @@ const run = async () => {
             if (err) return console.error('Failed to bind event listener:', err);
             //console.log(result);
             console.log("Sai MINT : " , result )
+        });
+
+        Sai.Debug().watch((err, {result}) => {
+            if (err) return console.error('Failed to bind event listener:', err);
+            //console.log(result);
+            console.log("Sai Debug : " , result )
         });
 
         Tub.Debug().watch((err, {result}) => {

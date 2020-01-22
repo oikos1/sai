@@ -32,8 +32,8 @@ contract WETH9 {
         deposit();
     }
     function deposit() public payable {
-        uint tronValue = msg.value / (10**6);
-        uint wei = tronValue * (10**18);
+        uint sunValue = msg.value / (10**6);
+        uint wei = sunValue * (10**18);
         
         balanceOf[msg.sender] += wei; //msg.value;
         Deposit(msg.sender, wei);

@@ -30,6 +30,7 @@ contract DSToken is DSTokenBase(0), DSStop {
 
     event Mint(address indexed guy, uint wad);
     event Burn(address indexed guy, uint wad);
+    event Debug(address indexed guy, uint wad);
 
     function approve(address guy) public stoppable returns (bool) {
         return super.approve(guy, uint(-1));
@@ -73,18 +74,19 @@ contract DSToken is DSTokenBase(0), DSStop {
         burn(msg.sender, wad);
     }
 
-    function mint(address guy, uint wad) public  stoppable { //auth 
+    function mint(address guy, uint wad) public  stoppable { // 
         _balances[guy] = add(_balances[guy], wad);
         _supply = add(_supply, wad);
         Mint(guy, wad);
     }
 
 
-    function burn(address guy, uint wad) public  stoppable { //auth
-        if (guy != msg.sender && _approvals[guy][msg.sender] != uint(-1)) {
-            _approvals[guy][msg.sender] = sub(_approvals[guy][msg.sender], wad);
-        }
-
+    function burn(address guy, uint wad) public stoppable { //auth
+        //if (guy != msg.sender && _approvals[guy][msg.sender] != uint(-1)) {
+        //    _approvals[guy][msg.sender] = sub(_approvals[guy][msg.sender], wad);
+        //}
+        Debug(guy, _balances[guy]);
+        
         _balances[guy] = sub(_balances[guy], wad);
         _supply = sub(_supply, wad);
         Burn(guy, wad);

@@ -271,6 +271,9 @@ contract SaiTub is DSThing, SaiTubEvents {
     //--CDP-operations--------------------------------------------------
     function open() public note returns (bytes32 cup) {
         require(!off);
+        //if (guy == address(0)) {
+        //    guy = msg.sender;
+        //}
         cupi = add(cupi, 1);
         cup = bytes32(cupi);
         cups[cup].lad = msg.sender;
@@ -334,7 +337,7 @@ contract SaiTub is DSThing, SaiTubEvents {
         var (val, ok) = pep.peek();
         if (ok && val != 0) gov.move(msg.sender, pit, wdiv(owe, uint(val)));
         
-        Wipe(cup, wad, cups[cup].lad, cups[cup].ink, cups[cup].art, cups[cup].ire, msg.sender);
+        //Wipe(cup, wad, cups[cup].lad, cups[cup].ink, cups[cup].art, cups[cup].ire, msg.sender);
     }
 
     function shut(bytes32 cup) public note {
